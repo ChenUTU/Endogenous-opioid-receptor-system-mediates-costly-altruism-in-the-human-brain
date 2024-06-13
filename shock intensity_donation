@@ -1,0 +1,14 @@
+color_mapping <- c("fmri" = '#6C7B8B', "pet" = '#FF6A6A')
+ggplot(id, aes(x = intensity_movie1, y = donation)) +
+  geom_boxplot() +
+  geom_dotplot(aes(fill = color_group), binaxis = "y", stackdir = "center") +
+  theme_classic() +
+  theme(axis.text = element_text(lineheight = 1.5,size = 25),
+        axis.ticks = element_line(size = 2),
+        axis.title.x = element_text(size = 25),
+        axis.title.y = element_text(size = 25),
+        axis.title = element_text(size = 14),
+        legend.position = "none"
+  ) +
+  labs(x = "Shock Intensity", y = "Donation Size") +
+  scale_fill_manual(values = color_mapping)
