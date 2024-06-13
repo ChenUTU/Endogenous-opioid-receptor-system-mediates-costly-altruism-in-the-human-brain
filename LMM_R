@@ -1,0 +1,1 @@
+model_both_random <- lmer(donation~ intensity_movie1 + (1 + intensity_movie1|id), data = df.behav_data)
