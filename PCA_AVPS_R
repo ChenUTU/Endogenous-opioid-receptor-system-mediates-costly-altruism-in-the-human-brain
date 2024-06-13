@@ -1,0 +1,16 @@
+ggplot(df.data,aes(y=L_O_A))+
+  geom_point(aes(x=PC1),color="brown1")+
+  geom_smooth(aes(x=PC1),method = lm, se= FALSE,color="brown4")+
+  geom_point(aes(x=PC2),color="aquamarine3")+
+  geom_smooth(aes(x=PC2),method = lm, se= FALSE,color="aquamarine4")+labs()+
+  geom_point(aes(x=PC3),color="orange")+
+  geom_smooth(aes(x=PC3),method = lm, se= FALSE,color="orange3")+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line=element_line((colour="black")),
+        axis.title.x = element_text(size = 25),
+        axis.title.y = element_text(size = 25),
+        axis.text = element_text(lineheight = 1.5, size = 25),
+        axis.ticks = element_line(size  =  2))+
+  ylab("Loading on AVPS")+xlab("Score after PCA")
